@@ -1,4 +1,5 @@
 import "reflect-metadata";
+import * as path from 'path';
 import {ConnectionOptions, createConnection} from "../../src/index";
 import {Post} from "./entity/Post";
 
@@ -9,13 +10,18 @@ const options: ConnectionOptions = {
     // password: "oracle",
     // port: 1521,
     // sid: "xe.oracle.docker",
-    "name": "mysql",
-    "type": "mysql",
+    "name": "covenantsql",
+    "type": "covenantsql",
+    // "host": "e.morenodes.com",
+    // "port": 11108,
+    // "username": "root",
     "host": "localhost",
     "port": 3306,
     "username": "root",
     "password": "",
-    "database": "typeorm_test",
+    "database": "053d0bb19637ffc7b4a94e3c79cc71b67a768813b09e4b67f1d6159902754a8b",
+    "key_dir": path.resolve(__dirname, './ssl/write.test.covenantsql.io.key'),
+    "https_pem_dir": path.resolve(__dirname, './ssl/write.test.covenantsql.io.pem'),
     // type: "postgres",
     // host: "localhost",
     // port: 5432,

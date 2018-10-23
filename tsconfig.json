@@ -17,6 +17,7 @@
         "pretty": true,
         "strictNullChecks": true,
         "noUnusedLocals": true,
+        "keyofStringsOnly": true,
         "downlevelIteration": true
     },
     "exclude": [

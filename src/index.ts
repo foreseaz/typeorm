@@ -216,6 +216,10 @@ export async function createConnection(options: ConnectionOptions): Promise<Conn
 export async function createConnection(optionsOrName?: any): Promise<Connection> {
     const connectionName = typeof optionsOrName === "string" ? optionsOrName : "default";
     const options = optionsOrName instanceof Object ? optionsOrName : await getConnectionOptions(connectionName);
+    console.log('-----------------------------');
+    console.log(options);
+    console.log('-----------------------------');
+    // console.log('-----------------------------', getConnectionManager().create(options));
     return getConnectionManager().create(options).connect();
 }
 

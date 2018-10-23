@@ -60,9 +60,13 @@ export class ConnectionManager {
             this.connections.splice(this.connections.indexOf(existConnection), 1);
         }
 
+        // console.log('//----- ConnectionManager create() existConnection', existConnection)
+
         // create a new connection
         const connection = new Connection(options);
         this.connections.push(connection);
+
+        // console.log('//----- ConnectionManager create() this.connections', connection)
         return connection;
     }
 

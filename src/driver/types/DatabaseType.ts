@@ -13,4 +13,5 @@ export type DatabaseType =
     "oracle"|
     "mssql"|
     "mongodb"|
+    "covenantsql"|
     "expo";

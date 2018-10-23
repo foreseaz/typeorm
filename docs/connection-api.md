@@ -66,7 +66,7 @@ const connection = getConnection();
 const secondaryConnection = getConnection("secondary-connection");
 ```
 
-* `getEntityManager()` - Gets `EntityManager` from connection. 
+* `getEntityManager()` - Gets `EntityManager` from connection.
 Connection name can be specified to indicate what connection's entity manager should be taken.
 
 ```typescript
@@ -79,7 +79,7 @@ const secondaryManager = getEntityManager("secondary-connection");
 // you can use secondary connection manager methods
 ```
 
-* `getRepository()` - Gets `Repository` for given entity from connection. 
+* `getRepository()` - Gets `Repository` for given entity from connection.
 Connection name can be specified to indicate what connection's entity manager should be taken.
 
 ```typescript
@@ -92,7 +92,7 @@ const blogRepository = getRepository(Blog, "secondary-connection");
 // you can use secondary connection repository methods
 ```
 
-* `getTreeRepository()` - Gets `TreeRepository` for given entity from connection. 
+* `getTreeRepository()` - Gets `TreeRepository` for given entity from connection.
 Connection name can be specified to indicate what connection's entity manager should be taken.
 
 ```typescript
@@ -105,7 +105,7 @@ const blogRepository = getTreeRepository(Blog, "secondary-connection");
 // you can use secondary connection repository methods
 ```
 
-* `getMongoRepository()` - Gets `MongoRepository` for given entity from connection. 
+* `getMongoRepository()` - Gets `MongoRepository` for given entity from connection.
 Connection name can be specified to indicate what connection's entity manager should be taken.
 
 ```typescript
@@ -168,21 +168,21 @@ const manager: MongoEntityManager = connection.mongoManager;
 const user = await manager.findOne(1);
 ```
 
-* `connect` - Performs connection to the database. 
+* `connect` - Performs connection to the database.
 When you use `createConnection` it automatically calls `connect` and you don't need to call it yourself.
 
 ```typescript
 await connection.connect();
 ```
 
-* `close` - Closes connection with the database. 
+* `close` - Closes connection with the database.
 Usually, you call this method when your application is shutting down.
 
 ```typescript
 await connection.close();
 ```
 
-* `synchronize` - Synchronizes database schema. When `synchronize: true` is set in connection options it calls this method. 
+* `synchronize` - Synchronizes database schema. When `synchronize: true` is set in connection options it calls this method.
 Usually, you call this method when your application is shuting down.
 
 ```typescript
@@ -296,7 +296,7 @@ const users = await connection.createQueryBuilder()
 ```
 
 * `createQueryRunner` - Creates a query runner used manage and work with a single real database connection.
-Learn more about [QueryRunner](./query-runner.md). 
+Learn more about [QueryRunner](./query-runner.md).
 
 ```typescript
 const queryRunner = connection.createQueryRunner();

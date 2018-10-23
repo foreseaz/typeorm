@@ -8,6 +8,7 @@ import {CordovaConnectionOptions} from "../driver/cordova/CordovaConnectionOptio
 import {SqljsConnectionOptions} from "../driver/sqljs/SqljsConnectionOptions";
 import {ReactNativeConnectionOptions} from "../driver/react-native/ReactNativeConnectionOptions";
 import {NativescriptConnectionOptions} from "../driver/nativescript/NativescriptConnectionOptions";
+import {CovenantsqlConnectionOptions} from "../driver/covenantsql/CovenantsqlConnectionOptions";
 import {ExpoConnectionOptions} from "../driver/expo/ExpoConnectionOptions";
 
 /**
@@ -26,4 +27,5 @@ export type ConnectionOptions =
     ReactNativeConnectionOptions|
     SqljsConnectionOptions|
     MongoConnectionOptions|
+    CovenantsqlConnectionOptions|
     ExpoConnectionOptions;

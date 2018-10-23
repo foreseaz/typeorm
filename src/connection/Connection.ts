@@ -126,6 +126,12 @@ export class Connection {
         this.queryResultCache = options.cache ? new QueryResultCacheFactory(this).create() : undefined;
         this.relationLoader = new RelationLoader(this);
         this.relationIdLoader = new RelationIdLoader(this);
+
+        console.log('//----------------- Connection')
+        console.log('//----- Connection driver:', this.driver)
+        console.log()
+        console.log('//----- Connection driver:', this.driver.connect)
+        console.log('//-----------------')
     }
 
     // -------------------------------------------------------------------------
